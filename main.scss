@@ -20,6 +20,7 @@ body {
 a{
 	text-decoration: none;
 }
+/*
 .navigation {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	.navigation__background {
@@ -112,7 +113,21 @@ a{
 	background-position: 100%;
 	color: teal;
 }
-
+.navigation__link {
+	display: none;
+	&:visited {
+		& ~ .navigation__background {
+			-webkit-transform: scale(100);
+			transform: scale();
+		}
+		& ~ .navigation__nav {
+			opacity: 1;
+			width: 100%;
+			z-index: 1500;
+		}
+	}
+}
+*/
 .header {
 	height: 95vh;
 	background-image: linear-gradient(to right bottom, $primary-color, $secondary-color);
@@ -305,37 +320,301 @@ a{
 			padding: 26vw 0vw 26vw 0vw;
 		}
 		#xv{
-			background-image: url(/timeline/timeline_computers_1937.jpg);
+			background-image: url(/timeline/timeline_computers_1953.manchestertc.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 26vw 0vw 26vw 0vw;
 		}
 		#xvi{
-			background-image: url(/timeline/timeline_computers_1943.stibitz.jpg);
+			background-image: url(/timeline/timeline_computers_1954.ibm650.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 26vw 0vw 26vw 0vw;
 		}
 		#xvii{
-			background-image: url(/timeline/timeline_computers_1944.colossus.jpg);
+			background-image: url(/timeline/timeline_computers_1955.deuce.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 26vw 0vw 26vw 0vw;
 		}
 		#xviii{
-			background-image: url(/timeline/timeline_computers_1945.vonneumann.jpg);
+			background-image: url(/timeline/timeline_computers_1956.mit.tx-0.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 48vw 0vw 26vw 0vw;
 		}
 		#xix{
-			background-image: url(/timeline/timeline_computers_1946.mooreschool.jpg);
+			background-image: url(/timeline/timeline_computers_1957.themill.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 26vw 0vw 26vw 0vw;
 		}
 		#xx{
-			background-image: url(/timeline/timeline_computers_1948.manchesterbaby.jpg);
+			background-image: url(/timeline/timeline_computers_1958.rca501.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#x{
+			background-image: url(/timeline/timeline_computers_1959.stretch.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxi{
+			background-image: url(/timeline/timeline_computers_1960.decpdp1.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxii{
+			background-image: url(/timeline/timeline_computers_1962.linc.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxiii{
+			background-image: url(/timeline/timeline_computers_1964.cdc6600.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxiv{
+			background-image: url(/timeline/timeline_computers_1965.ddp116.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxv{
+			background-image: url(/timeline/timeline_computers_1966.HP2116A.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxvi{
+			background-image: url(/timeline/timeline_computers_1968.agcdsky.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxvii{
+			background-image: url(/timeline/timeline_computers_1970.amdahl470.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxviii{
+			background-image: url(/timeline/timeline_computers_1971.kenbak.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#xxix{
+			background-image: url(/timeline/timeline_computers_1974.scelbi.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxx{
+			background-image: url(/timeline/timeline_computers_1975.mitsaltair.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxx{
+			background-image: url(/timeline/timeline_computers_1976.cray1.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxi{
+			background-image: url(/timeline/timeline_computers_1977.appleII.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxii{
+			background-image: url(/timeline/timeline_computers_1978.vax11-780.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxiii{
+			background-image: url(/timeline/timeline_computers_1979.atari400-800.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxiv{
+			background-image: url(/timeline/timeline_computers_1980.vic20.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxv{
+			background-image: url(/timeline/timeline_computers_1981.computerprogramme.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxvi{
+			background-image: url(/timeline/timeline_computers_1982.commodore64.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxvii{
+			background-image: url(/timeline/timeline_computers_1983.lisa.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xxxviii{
+			background-image: url(/timeline/timeline_computers_1984.applemacintosh.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#xxxix{
+			background-image: url(/timeline/timeline_computers_1986.compaq-deskpro-386.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xl{
+			background-image: url(/timeline/timeline_computers_1987.Acorn_Archimedes.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xli{
+			background-image: url(/timeline/timeline_computers_1989.486.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xli{
+			background-image: url(/timeline/timeline_computers_1990.touchstonedelta.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xlii{
+			background-image: url(/timeline/timeline_computers_1991.Babbage_Difference_Engine.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xliii{
+			background-image: url(/timeline/timeline_computers_1993.newton.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xliv{
+			background-image: url(/timeline/timeline_computers_1994.Acorn_Risc_PC_600.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xlv{
+			background-image: url(/timeline/timeline_computers_1995.thinkpad.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xlvi{
+			background-image: url(/timeline/timeline_computers_1996.Sony_VAIO.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xlvii{
+			background-image: url(/timeline/timeline_computers_1997.asci.red5.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xlviii{
+			background-image: url(/timeline/timeline_computers_2000.Sharp_Jphone.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#xlix{
+			background-image: url(/timeline/timeline_computers_2002.Earth_simulator_ES2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#l{
+			background-image: url(/timeline/timeline_computers_2005.ibm.lenovo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#l{
+			background-image: url(/timeline/timeline_computers_2005_arduino.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#li{
+			background-image: url(/timeline/timeline_computers_2006.onelaptopperchild.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lii{
+			background-image: url(/timeline/timeline_computers_2007.amazonkindle.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#liii{
+			background-image: url(/timeline/timeline_computers_2007.iphone.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#liv{
+			background-image: url(/timeline/timeline_computers_2008.macbookair.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lv{
+			background-image: url(/timeline/timeline_computers_2009.roadrunner.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lvi{
+			background-image: url(/timeline/timeline_computers_2011_nest.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lvii{
+			background-image: url(/timeline/timeline_computers_2012.raspberrypi.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lviii{
+			background-image: url(/timeline/timeline_computers_2012_appleretina.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#lix{
+			background-image: url(/timeline/timeline_computers_2015_applewatch.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#lx{
+			background-image: url(/timeline/Scamp.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 26vw 0vw 26vw 0vw;
@@ -361,7 +640,30 @@ a{
 	}
 }
 
-
+.footer{
+	background-color: $primary-color;
+	color: $tertiary-color;
+	.about{
+		
+		position: relative;
+		left: 5vw;
+		font-size: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 5vw 0vw 5vw 0vw;
+		&_list{
+			background-color: $secondary-color;
+			border-radius: 80px;
+			padding: 10px;
+			list-style: none;
+			max-width: fit-content;
+		}
+		
+	}
+}
+.name{
+	display: none;
+}
 
 
 

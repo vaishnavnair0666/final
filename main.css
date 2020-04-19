@@ -14,109 +14,114 @@ a {
   text-decoration: none;
 }
 
+/*
 .navigation {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	.navigation__background {
+		height: 2rem;
+		width: 2rem;
+		background-image: radial-gradient($primary-color, $secondary-color);
+		position: fixed;
+		top: 4rem;
+		right: 6rem;
+		border-radius: 50%;
+		z-index: 1000;
+		-webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		-webkit-transition: -webkit-transform .8s ease-in-out;
+		transition: -webkit-transform .8s ease-in-out;
+		transition: transform .8s ease-in-out;
+		transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+	}
+	.navigation__button {
+		background-color: $secondary-color;
+		height: 5vw;
+		width: 5vw;
+		position: fixed;
+		top: 3rem;
+		right: 4rem;
+		border-radius: 50%;
+		z-index: 2000;
+		text-align: center;
+		cursor: pointer;
+	}
+	.navigation__checkbox {
+		display: none;
+		&:checked {
+			& ~ .navigation__background {
+				-webkit-transform: scale(100);
+				transform: scale(150);
+			}
+			& ~ .navigation__nav {
+				opacity: 1;
+                width: 100%;
+                z-index: 1500;
+			}
+		}
+	}
+	.navigation__nav {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0px;
+		z-index: -2;
+		opacity: 0;
+		width: 0;
+		-webkit-transition: all .8s ease-in-out;
+		transition: all .8s ease-in-out;
+	}
+	.navigation__list {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		list-style: none;
+		text-align: center;
+		width: 100%;
+	}
+	.navigation__item {
+		margin: 1rem;
+	}
+	.navigation__icon {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		width: 3vw;
+		display: inline-block;
+	}
 }
-
-.navigation .navigation__background {
-  height: 2rem;
-  width: 2rem;
-  background-image: radial-gradient(#4b2637, #7d2941);
-  position: fixed;
-  top: 4rem;
-  right: 6rem;
-  border-radius: 50%;
-  z-index: 1000;
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
-  transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
-}
-
-.navigation .navigation__button {
-  background-color: #7d2941;
-  height: 5vw;
-  width: 5vw;
-  position: fixed;
-  top: 3rem;
-  right: 4rem;
-  border-radius: 50%;
-  z-index: 2000;
-  text-align: center;
-  cursor: pointer;
-}
-
-.navigation .navigation__checkbox {
-  display: none;
-}
-
-.navigation .navigation__checkbox:checked ~ .navigation__background {
-  -webkit-transform: scale(100);
-  transform: scale(150);
-}
-
-.navigation .navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%;
-  z-index: 1500;
-}
-
-.navigation .navigation__nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  z-index: -2;
-  opacity: 0;
-  width: 0;
-  -webkit-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
-}
-
-.navigation .navigation__list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-  width: 100%;
-}
-
-.navigation .navigation__item {
-  margin: 1rem;
-}
-
-.navigation .navigation__icon {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  text-align: center;
-  width: 3vw;
-  display: inline-block;
-}
-
 .navigation__link:link, .navigation__link:visited {
-  font-size: 2rem;
-  font-weight: 300;
-  padding: 1rem 3rem;
-  color: #e9e3e3;
-  text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #b3a2a2 50%);
-  background-size: 220%;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+	font-size: 2rem;
+	font-weight: 300;
+	padding: 1rem 3rem;
+	color: $tertiary-color;
+	text-transform: uppercase;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $bg-color 50%);
+	background-size:220%;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
 }
-
 .navigation__link:hover, .navigation__link:active {
-  background-position: 100%;
-  color: teal;
+	background-position: 100%;
+	color: teal;
 }
-
+.navigation__link {
+	display: none;
+	&:visited {
+		& ~ .navigation__background {
+			-webkit-transform: scale(100);
+			transform: scale();
+		}
+		& ~ .navigation__nav {
+			opacity: 1;
+			width: 100%;
+			z-index: 1500;
+		}
+	}
+}
+*/
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#4b2637), to(#7d2941));
@@ -343,42 +348,350 @@ a {
 }
 
 .contain .timeline #xv {
-  background-image: url(/timeline/timeline_computers_1937.jpg);
+  background-image: url(/timeline/timeline_computers_1953.manchestertc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 26vw 0vw 26vw 0vw;
 }
 
 .contain .timeline #xvi {
-  background-image: url(/timeline/timeline_computers_1943.stibitz.jpg);
+  background-image: url(/timeline/timeline_computers_1954.ibm650.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 26vw 0vw 26vw 0vw;
 }
 
 .contain .timeline #xvii {
-  background-image: url(/timeline/timeline_computers_1944.colossus.jpg);
+  background-image: url(/timeline/timeline_computers_1955.deuce.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 26vw 0vw 26vw 0vw;
 }
 
 .contain .timeline #xviii {
-  background-image: url(/timeline/timeline_computers_1945.vonneumann.jpg);
+  background-image: url(/timeline/timeline_computers_1956.mit.tx-0.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 48vw 0vw 26vw 0vw;
 }
 
 .contain .timeline #xix {
-  background-image: url(/timeline/timeline_computers_1946.mooreschool.jpg);
+  background-image: url(/timeline/timeline_computers_1957.themill.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 26vw 0vw 26vw 0vw;
 }
 
 .contain .timeline #xx {
-  background-image: url(/timeline/timeline_computers_1948.manchesterbaby.jpg);
+  background-image: url(/timeline/timeline_computers_1958.rca501.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #x {
+  background-image: url(/timeline/timeline_computers_1959.stretch.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxi {
+  background-image: url(/timeline/timeline_computers_1960.decpdp1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxii {
+  background-image: url(/timeline/timeline_computers_1962.linc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxiii {
+  background-image: url(/timeline/timeline_computers_1964.cdc6600.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxiv {
+  background-image: url(/timeline/timeline_computers_1965.ddp116.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxv {
+  background-image: url(/timeline/timeline_computers_1966.HP2116A.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxvi {
+  background-image: url(/timeline/timeline_computers_1968.agcdsky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxvii {
+  background-image: url(/timeline/timeline_computers_1970.amdahl470.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxviii {
+  background-image: url(/timeline/timeline_computers_1971.kenbak.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxix {
+  background-image: url(/timeline/timeline_computers_1974.scelbi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxx {
+  background-image: url(/timeline/timeline_computers_1975.mitsaltair.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxx {
+  background-image: url(/timeline/timeline_computers_1976.cray1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxi {
+  background-image: url(/timeline/timeline_computers_1977.appleII.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxii {
+  background-image: url(/timeline/timeline_computers_1978.vax11-780.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxiii {
+  background-image: url(/timeline/timeline_computers_1979.atari400-800.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxiv {
+  background-image: url(/timeline/timeline_computers_1980.vic20.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxv {
+  background-image: url(/timeline/timeline_computers_1981.computerprogramme.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxvi {
+  background-image: url(/timeline/timeline_computers_1982.commodore64.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxvii {
+  background-image: url(/timeline/timeline_computers_1983.lisa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxviii {
+  background-image: url(/timeline/timeline_computers_1984.applemacintosh.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xxxix {
+  background-image: url(/timeline/timeline_computers_1986.compaq-deskpro-386.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xl {
+  background-image: url(/timeline/timeline_computers_1987.Acorn_Archimedes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xli {
+  background-image: url(/timeline/timeline_computers_1989.486.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xli {
+  background-image: url(/timeline/timeline_computers_1990.touchstonedelta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlii {
+  background-image: url(/timeline/timeline_computers_1991.Babbage_Difference_Engine.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xliii {
+  background-image: url(/timeline/timeline_computers_1993.newton.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xliv {
+  background-image: url(/timeline/timeline_computers_1994.Acorn_Risc_PC_600.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlv {
+  background-image: url(/timeline/timeline_computers_1995.thinkpad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlvi {
+  background-image: url(/timeline/timeline_computers_1996.Sony_VAIO.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlvii {
+  background-image: url(/timeline/timeline_computers_1997.asci.red5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlviii {
+  background-image: url(/timeline/timeline_computers_2000.Sharp_Jphone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #xlix {
+  background-image: url(/timeline/timeline_computers_2002.Earth_simulator_ES2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #l {
+  background-image: url(/timeline/timeline_computers_2005.ibm.lenovo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #l {
+  background-image: url(/timeline/timeline_computers_2005_arduino.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #li {
+  background-image: url(/timeline/timeline_computers_2006.onelaptopperchild.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lii {
+  background-image: url(/timeline/timeline_computers_2007.amazonkindle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #liii {
+  background-image: url(/timeline/timeline_computers_2007.iphone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #liv {
+  background-image: url(/timeline/timeline_computers_2008.macbookair.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lv {
+  background-image: url(/timeline/timeline_computers_2009.roadrunner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lvi {
+  background-image: url(/timeline/timeline_computers_2011_nest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lvii {
+  background-image: url(/timeline/timeline_computers_2012.raspberrypi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lviii {
+  background-image: url(/timeline/timeline_computers_2012_appleretina.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lix {
+  background-image: url(/timeline/timeline_computers_2015_applewatch.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 26vw 0vw 26vw 0vw;
+}
+
+.contain .timeline #lx {
+  background-image: url(/timeline/Scamp.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 26vw 0vw 26vw 0vw;
@@ -400,5 +713,35 @@ a {
   max-width: 75vw;
   text-align: left;
   padding: 0 12.5vw 0 12.5vw;
+}
+
+.footer {
+  background-color: #4b2637;
+  color: #e9e3e3;
+}
+
+.footer .about {
+  position: relative;
+  left: 5vw;
+  font-size: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 5vw 0vw 5vw 0vw;
+}
+
+.footer .about_list {
+  background-color: #7d2941;
+  border-radius: 80px;
+  padding: 10px;
+  list-style: none;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.name {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
