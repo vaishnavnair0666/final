@@ -1,0 +1,367 @@
+$primary-color: #4b2637;
+$secondary-color:#7d2941;
+$tertiary-color: #e9e3e3;
+$bg-color: #b3a2a2;
+
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap");
+
+* {
+	margin: 0;
+
+  }
+
+body {
+	background-color: $tertiary-color;
+	font-family: 'Merriweather', serif,'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	line-height: 1.7;
+	
+}
+a{
+	text-decoration: none;
+}
+.navigation {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	.navigation__background {
+		height: 2rem;
+		width: 2rem;
+		background-image: radial-gradient($primary-color, $secondary-color);
+		position: fixed;
+		top: 4rem;
+		right: 6rem;
+		border-radius: 50%;
+		z-index: 1000;
+		-webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		-webkit-transition: -webkit-transform .8s ease-in-out;
+		transition: -webkit-transform .8s ease-in-out;
+		transition: transform .8s ease-in-out;
+		transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+	}
+	.navigation__button {
+		background-color: $secondary-color;
+		height: 5vw;
+		width: 5vw;
+		position: fixed;
+		top: 3rem;
+		right: 4rem;
+		border-radius: 50%;
+		z-index: 2000;
+		text-align: center;
+		cursor: pointer;
+	}
+	.navigation__checkbox {
+		display: none;
+		&:checked {
+			& ~ .navigation__background {
+				-webkit-transform: scale(100);
+				transform: scale(150);
+			}
+			& ~ .navigation__nav {
+				opacity: 1;
+                width: 100%;
+                z-index: 1500;
+			}
+		}
+	}
+	.navigation__nav {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0px;
+		z-index: -2;
+		opacity: 0;
+		width: 0;
+		-webkit-transition: all .8s ease-in-out;
+		transition: all .8s ease-in-out;
+	}
+	.navigation__list {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		list-style: none;
+		text-align: center;
+		width: 100%;
+	}
+	.navigation__item {
+		margin: 1rem;
+	}
+	.navigation__icon {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		width: 3vw;
+		display: inline-block;
+	}
+}
+.navigation__link:link, .navigation__link:visited {
+	font-size: 2rem;
+	font-weight: 300;
+	padding: 1rem 3rem;
+	color: $tertiary-color;
+	text-transform: uppercase;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $bg-color 50%);
+	background-size:220%;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.navigation__link:hover, .navigation__link:active {
+	background-position: 100%;
+	color: teal;
+}
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, $primary-color, $secondary-color);
+	background-size: 100%;
+	background-position: bottom;
+	position: relative;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+	
+}
+.logo-box {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+.logo {
+	height: 70px;
+}
+.text-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+	text-align: center;
+}
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+}
+.heading-primary-main {
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+}
+.heading-primary-sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 10px;
+}
+
+.body {
+	font-family: Impact,  'Arial Narrow Bold', sans-serif;
+}
+.content__title {
+	letter-spacing: 10px;
+	font-size: 3rem;
+	font-weight: 100;
+	text-align: center;
+	font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.contain{
+	font-size: 1.5vw;
+	color: $tertiary-color;
+	font-family: 'Open sans';
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	.time-navi{
+		position: sticky;
+		top: 0;
+		&_list{
+			position: absolute;
+			top: 5vw;
+			padding: 1vw 1vw 1vw 1vw;
+			list-style: none;
+			background-color: $tertiary-color;
+			border-radius: 80px;
+			background-size: cover;
+			.up-arrow{
+				font-size: 2rem;
+				font-family: 'Open sans';
+				text-align: center;
+				color: #707070;
+				&_link{
+					text-decoration: none;
+					color: #707070;
+				}
+			}
+			.down-arrow{
+				font-size: 2rem;
+				font-family: 'Open sans';
+				text-align: center;
+				color: #707070;
+				transform: rotate(180deg);
+				&_link{
+					text-decoration: none;
+					color: #707070;
+				}
+			}
+			&_link{
+				text-decoration: none;
+				color: #707070;
+			}
+			&_item{
+				font-size: 2rem;
+				font-family: 'Open sans';
+			}
+		}
+	}
+	.timeline{
+		#i{
+			background-image: url(/timeline/timeline_computers_1937.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#ii{
+			background-image: url(/timeline/timeline_computers_1939.hewlettpackard.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#iii{
+			background-image: url(/timeline/timeline_computers_1940.cnc.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#iv{
+			background-image: url(/timeline/timeline_computers_1941.zusez3.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#v{
+			background-image: url(/timeline/timeline_computers_1942.abc.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#vi{
+			background-image: url(/timeline/timeline_computers_1943.stibitz.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#vii{
+			background-image: url(/timeline/timeline_computers_1944.colossus.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#viii{
+			background-image: url(/timeline/timeline_computers_1945.vonneumann.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#ix{
+			background-image: url(/timeline/timeline_computers_1946.mooreschool.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#x{
+			background-image: url(/timeline/timeline_computers_1948.manchesterbaby.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xi{
+			background-image: url(/timeline/timeline_computers_1949.csirac.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xii{
+			background-image: url(/timeline/timeline_computers_1950.ace.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xiii{
+			background-image: url(/timeline/timeline_computers_1951.leo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xiv{
+			background-image: url(/timeline/timeline_computers_1952.maniac.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xv{
+			background-image: url(/timeline/timeline_computers_1937.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xvi{
+			background-image: url(/timeline/timeline_computers_1943.stibitz.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xvii{
+			background-image: url(/timeline/timeline_computers_1944.colossus.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xviii{
+			background-image: url(/timeline/timeline_computers_1945.vonneumann.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 48vw 0vw 26vw 0vw;
+		}
+		#xix{
+			background-image: url(/timeline/timeline_computers_1946.mooreschool.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		#xx{
+			background-image: url(/timeline/timeline_computers_1948.manchesterbaby.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 26vw 0vw 26vw 0vw;
+		}
+		&_{
+			&_title{
+				background-color: $secondary-color;
+				max-width: 75vw;
+				font-size: 1.8vw;
+				padding: 0 12.5vw 0 12.5vw ;
+			}
+			&_year{
+				
+				text-align: left;
+			}
+			&_description{
+				background-color: $secondary-color;
+				max-width: 75vw;
+				text-align: left;
+				padding: 0 12.5vw 0 12.5vw ;
+			}
+		}
+	}
+}
+
+
+
+
+
